@@ -254,8 +254,8 @@ body {
   }
 
   .info-photo-first {
-    height: 100%;
-    width: 50%;
+    display:flex;
+    block-size: 90%;
   }
 
   .info-container {
@@ -281,8 +281,8 @@ body {
   }
 
   .info-photo-second {
-    height: 100%;
-    width: 40%;
+    display:flex;
+    block-size: 90%;
   }
 
   .block-h {
@@ -679,6 +679,14 @@ body {
 
     .footer-all-info {
       font-size: calc(7px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
+    }
+    
+    .info-photo-first {
+      block-size: 60%;
+    }
+
+    .info-photo-second {
+      block-size: 60%;
     }
 
 }
