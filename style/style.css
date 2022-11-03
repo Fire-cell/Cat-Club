@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
     text-emphasis: none;
 }
@@ -55,11 +59,11 @@ body {
 }
 
 .header {
-
     position: relative;
     width: 100%;
 }
-/*Навігація по сторінці*/
+/*================== Навігація по сторінці ==================*/
+
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
   display: none;
@@ -72,9 +76,8 @@ body {
   background: #fff;
   color: #000;
   opacity: 0.85;
-  height: 50px;
+  height: 59.5px;
   z-index: 12;
-  margin-bottom: 5px;
 }
 
 .navbar-container {
@@ -83,6 +86,13 @@ body {
   padding: 0 5px;
   height: 64px;
   align-items: center;
+}
+.navbar-items {
+  display: flex;
+}
+
+.register-items {
+  margin-left: 5rem;
 }
 
 .register-items, 
@@ -96,7 +106,7 @@ body {
   list-style: none;
   margin-left: 1.5rem;
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: calc(7px + 9 * (100vw / 1280)); /*16px*/
 }
 
 .register-items a,
@@ -113,9 +123,9 @@ body {
 }
 
 .logo-container {
-  justify-content: center;
-  height: 7vh;
-  width:  7%;
+  margin-bottom: 5px;
+  height: 55px;
+  width: 55px;
 }
 
 .logo {
@@ -125,7 +135,7 @@ body {
 
 .info-section-header {
   margin: 0 auto;
-  font-size: 3rem;
+  font-size: calc(16px + 34 * (100vw / 1280)); /*50px*/
   text-align: center;
   text-transform: uppercase;
   position: absolute;
@@ -133,23 +143,6 @@ body {
   padding: 0 20px;
 }
 
-.box {
-  margin: 5vh 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  
-}
-
-.box::before {
-  content:'';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #444;
-  position: absolute;
-  top: 1.5rem;
-}
 
 /*=============== Контент сторінки ====================*/
 
@@ -176,7 +169,7 @@ body {
 .main-title {
     text-transform: uppercase;
     margin-top: 1.5em;
-    font-size: 3.5rem;
+    font-size: calc(25px + (15 + 15 * 0.7) * ((100vw - 320px) / 1280));;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
@@ -190,7 +183,7 @@ body {
     margin-top: 1em;
     text-transform: uppercase;
     font-weight:500;
-    font-size: 50%;
+    font-size: calc(3px + 10 * (100vw / 1280));
     width: 20%;
     height: 10%;
     content: center;
@@ -207,6 +200,25 @@ body {
     transition: background 0.3s ease-in-out;
   }
 
+  
+.box {
+  margin: 5vh 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.box::before {
+  content:'';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #444;
+  position: absolute;
+  top: 1.5rem;
+}
+
   /*============= Текст, який сам вводиться! ====================*/
   .inputting-text {
     overflow: hidden; 
@@ -219,35 +231,36 @@ body {
       blink-caret .75s step-end infinite;
   }
   
-  /* The typing effect */
   @keyframes typing {
     from { width: 0 }
     to { width: 23% }
   }
   
-  /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: white; }
   }
 
   /*=============Описання=====================*/
+
   .main-info-first,
   .main-info-second {
+    display: flex;
     height: 90vh;
     align-items: center;
-    display: flex;
     justify-content: space-between;
     padding: 0 5%;
+    margin: 5% auto;
   }
 
   .info-photo-first {
-    block-size: 100%;
+    height: 100%;
+    width: 50%;
   }
 
   .info-container {
     opacity: 0.7;
-    display: grid;
+    display: block;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -257,10 +270,10 @@ body {
 
   .info-club-block {
     text-align:justify;
-    width: 70%;
+    width: 80%;
     height: 30vh;
-    margin: 0 10%;
-    font-size: 1.5rem;
+    margin: 5% 10%;
+    font-size: calc(5px + 15 * (100vw / 1280));
   }
 
   .main-info-second {
@@ -268,14 +281,15 @@ body {
   }
 
   .info-photo-second {
-    block-size: 90%;
+    height: 100%;
+    width: 40%;
   }
 
   .block-h {
     margin-bottom: 2%;
     text-align: center;
     color: black;
-    font-size: 2rem;
+    font-size: calc(14px + 16 * (100vw / 1280));
   }
 
   .wrapper-wnr-cats {
@@ -438,7 +452,8 @@ body {
   font-size: 1.3rem;
 }
 
-.social-media-header {
+.social-media-header{
+  font-family: inherit;
   font-size: 100%;
 }
 
@@ -471,7 +486,7 @@ body {
   justify-content: space-between;
   font-family: inherit;
   margin-top: 3vh;
-  font-size: 70%;
+  font-size: calc(5px + 7 * (100vw / 1280));
   height: 25vh;
   width: 100%;
 }
@@ -486,7 +501,7 @@ body {
 .social-media-footer-header {
   width: 100%;
   height: 5vh;
-  font-size: 130%;
+  font-size: 95%;
 }
 
 .text-social-media-block {
@@ -502,7 +517,7 @@ body {
 
 
 .certificate-items-list li {
-  margin: 1.2vh auto;
+  margin: 0.8vh auto;
 }
 
 .certificate-items-list li a {
@@ -515,14 +530,14 @@ body {
 }
 
 .reg-btn {
-  width: 50%;
+  width: 70%;
   height: 20%;
-  font-size: 100%;
+  font-size: 70%;
 }
 
 .reg-text {
   margin: 1vh auto;
-  font-size: 120%; 
+  font-size: 100%; 
 }
 
 .footer-rights {
@@ -548,7 +563,6 @@ body {
     .navbar-container {
       display: block;
       position: relative;
-      height: 64px;
     }
   
     .navbar-container input[type="checkbox"] {
@@ -600,7 +614,7 @@ body {
     .navbar .menu-items {
       padding-top: 100px;
       background: #fff;
-      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
       max-width: 300px;
       transform: translate(-150%);
       display: flex;
@@ -610,12 +624,18 @@ body {
       transition: transform 0.5s ease-in-out;
       box-shadow: 5px 0px 10px 0px #aaa;
     }
-  
+
+    .register-items {
+      margin: 20% 0;
+    }
+
+    .navbar .register-items li,
     .navbar .menu-items li {
       margin-bottom: 1.5rem;
       font-size: 1.3rem;
       font-weight: 500;
     }
+
   
     .logo {
       position: absolute;
@@ -640,4 +660,25 @@ body {
     .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
       transform: rotate(-35deg);
     }
+
+    .box::before {
+      display: none;
+    }
+
+    .info-section-header {
+      font-size: calc(16px + (34 + 34 * 0.7) * ((100vw - 320px) / 1280));
+    }
+
+    .info-club-block {
+      font-size: calc(9px + (15 + 15 * 0.7) * ((100vw - 320px) / 1280));
+    }
+
+    .block-h {
+      font-size: calc(16px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+    }
+
+    .footer-all-info {
+      font-size: calc(7px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
+    }
+
 }
