@@ -682,11 +682,11 @@ body {
     }
 
     .info-photo-first {
-      width:50%;
+      block-size: 60%;
     }
 
     .info-photo-second {
-      width:50%;
+      block-size: 60%;
     }
 
 }
