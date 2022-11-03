@@ -399,7 +399,7 @@ body {
 
 .contact-header {
   margin: 2%;
-  font: 2.4rem;
+  font: calc(5px + 20 * (100vw / 1280));
   text-align: center;
   font-family: Manrope;
   font-weight: 500;
@@ -443,7 +443,7 @@ body {
 }
 
 .form-container h2 {
-  font-size: 2.7rem;
+  font-size: calc(16px + 20 * (100vw / 1280));
   font-weight: 500;
   color: #444;
   margin-bottom: 1rem;
@@ -503,7 +503,7 @@ body {
 .social-media-footer-header {
   width: 100%;
   height: calc(var(--vh, 1vh) * 5);
-  font-size: 95%;
+  font-size: calc(2px + 20 * (100vw / 1280));
 }
 
 .text-social-media-block {
@@ -677,6 +677,14 @@ body {
 
     .block-h {
       font-size: calc(16px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+    }
+
+    .form-container h2 {
+      font-size: calc(16px + (20 + 20 * 0.7) * ((100vw - 320px) / 1280));
+    }
+
+    .contact-header {
+      font-size: calc(5px + (20 + 20 * 0.7) * ((100vw - 320px) / 1280));
     }
 
     .footer-all-info {
