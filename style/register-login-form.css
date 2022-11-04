@@ -1,0 +1,48 @@
+.register-login-form {
+    width: 100%;
+    text-align: center;
+    margin: 15% auto;    
+}
+
+.format-form-text {
+    font-size: 2rem;
+    margin: 2%;
+}
+
+.reg-header-container {
+    padding: 16px;
+    background-color: white;
+}
+
+.reg-btn {
+    margin: 5px auto;
+}
+
+.form-button {
+    width: 30%;
+    height: 3rem;
+}
+
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 15%;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.question {
+    text-align: center;
+    font-size: 1.5rem;
+}

@@ -16,6 +16,11 @@ a {
     text-emphasis: none;
 }
 
+hr {
+  background-color: white;
+  height: 1px;
+}
+
 ul,
 ol, 
 li {
@@ -548,6 +553,7 @@ body {
   height: calc(var(--vh, 1vh) * 3);
   width: 100%;
   text-align: center;
+  margin: 1px 0;
   font-family: inherit;
 }
 
