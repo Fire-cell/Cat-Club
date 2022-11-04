@@ -63,9 +63,12 @@ body {
     width: 100%;
 }
 /*================== Навігація по сторінці ==================*/
-
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
+  display: none;
+}
+
+.menu-register-items {
   display: none;
 }
 
@@ -89,10 +92,6 @@ body {
 }
 .navbar-items {
   display: flex;
-}
-
-.register-items {
-  margin-left: 5rem;
 }
 
 .register-items, 
@@ -250,7 +249,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    margin: 5% auto;
+    margin: 0% auto;
   }
 
   .info-photo-first {
@@ -266,7 +265,7 @@ body {
     justify-content: center;
     height: calc(var(--vh, 1vh) * 100);
     width: 70%;
-    padding: 10% 0;
+    padding: 5% 0;
   }
 
   .info-club-block {
@@ -473,7 +472,7 @@ body {
 .map-container {
   height: calc(var(--vh, 1vh) * 90);
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 /*================ Футер ===================*/
@@ -488,7 +487,7 @@ body {
   justify-content: space-between;
   font-family: inherit;
   margin-top: calc(var(--vh, 1vh) * 3);
-  font-size: calc(5px + 7 * (100vw / 1280));
+  font-size: calc(5px + 5 * (100vw / 1280));
   height: calc(var(--vh, 1vh) * 25);
   width: 100%;
 }
@@ -503,7 +502,8 @@ body {
 .social-media-footer-header {
   width: 100%;
   height: calc(var(--vh, 1vh) * 5);
-  font-size: calc(2px + 20 * (100vw / 1280));
+  font-size: calc(8px + 8 * (100vw / 1280));
+  margin-bottom: 0.6em;
 }
 
 .text-social-media-block {
@@ -673,6 +673,7 @@ body {
 
     .info-club-block {
       font-size: calc(9px + (15 + 15 * 0.7) * ((100vw - 320px) / 1280));
+      margin: 10%;
     }
 
     .block-h {
@@ -687,14 +688,23 @@ body {
       font-size: calc(5px + (20 + 20 * 0.7) * ((100vw - 320px) / 1280));
     }
 
+    .social-media-footer-header {
+      font-size: calc(8px + (10 + 10 * 0.7) * ((100vw - 320px)/1280));
+    }
+
     .footer-all-info {
-      font-size: calc(7px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
+      font-size: calc(5px + (10 + 10 * 0.7) * ((100vw - 320px) / 1280));
     }
 
     .info-photo-first {
       block-size: auto;
       height: 70%;
       width: 50%;
+    }
+
+    .menu-register-items {
+      display: flex;
+      margin-top: 2rem;
     }
 
     .info-photo-second {
