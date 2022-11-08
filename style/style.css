@@ -122,19 +122,36 @@ body {
 
 .register-items a:hover,
 .menu-items a:hover {
-  color: #FFE4C4;
+  color: #FFE4C4; /*Персикове щастя*/
   transition: color 0.3s ease-in-out;
 }
 
+.menu-drop-block ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  top: 70%;
+  padding-left: calc(-100px);
+  width: 9rem;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+}
+
+.menu-drop-block:hover ul {
+  display: block;
+}
+
 .logo-container {
+  justify-content: center;
+  text-align: center;
+  font-family: inherit;
   margin-bottom: 5px;
   height: 55px;
-  width: 55px;
+  width: 70px;
 }
 
 .logo {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 70%;
 }
 
 .info-section-header {
@@ -147,6 +164,9 @@ body {
   padding: 0 20px;
 }
 
+.phone-item {
+  display: none;
+}
 
 /*=============== Контент сторінки ====================*/
 
@@ -363,7 +383,7 @@ body {
 
 #contact {
   padding: 5rem 0;
-  background:rgb(75,0,130, 0.6); 
+  background:rgb(75,0,130, 0.9); 
 }
 
 .contact-container {
@@ -467,6 +487,16 @@ body {
   width: 100%;
 }
 
+.contact-data {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1%;
+  font-size: calc(4px + 12 * (100vw / 1280));
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+}
+
 /*================ Мапа ===================*/
 .map {
   height: 100%;
@@ -483,7 +513,7 @@ body {
 /*================ Футер ===================*/
 
 .footer {
-  background-color:rgb(75,0,130, 0.6);
+  background-color:rgb(75,0,130, 0.9);
   color: white;
 }
 
@@ -491,7 +521,7 @@ body {
   display: flex;
   justify-content: space-between;
   font-family: inherit;
-  margin-top: calc(var(--vh, 1vh) * 3);
+  margin-bottom: auto;
   font-size: calc(5px + 5 * (100vw / 1280));
   height: calc(var(--vh, 1vh) * 25);
   width: 100%;
@@ -548,7 +578,7 @@ body {
 }
 
 .footer-rights {
-  background-color: rgb(75,0,130, 0.6);
+  background-color: rgb(75,0,130, 0.9);
   color: white;
   height: calc(var(--vh, 1vh) * 3);
   width: 100%;
@@ -645,12 +675,10 @@ body {
     }
 
   
-    .logo {
+    .logo-container {
       position: absolute;
-      top: 10px;
+      margin-top: 2px;
       right: 15px;
-      width: 2rem;
-      height: 2rem;
     }
   
     .navbar-container input[type="checkbox"]:checked ~ .menu-items {
@@ -711,6 +739,14 @@ body {
     .menu-register-items {
       display: flex;
       margin-top: 2rem;
+    }
+
+    .menu-drop-block a {
+      display: none;
+    }
+
+    .phone-item {
+      display: block;
     }
 
     .info-photo-second {

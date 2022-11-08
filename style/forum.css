@@ -1,0 +1,32 @@
+.text-photo-block {
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+    width:100%;
+}
+
+.text-photo-block-content {
+    margin-top: auto;
+    font-size: calc(5px + 17 * (100vw / 1280));
+    text-align:center;
+}
+
+.text-photo-block-item {
+    width: 50%;
+}
+
+.text-photo-block-img {
+    background-image: url("../img/b31.jpg");
+    position: relative;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.forum-actual-question {
+
+}
+
+.forum-actual-question-list {
+
+}

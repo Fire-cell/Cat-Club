@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/register-login-form.css">
-    <title>Реєстрація</title>
+    <link rel="stylesheet" href="style/exhibitions.css">
+    <link rel="stylesheet" href="style/forum.css">
+    <title>Форум</title>
 </head>
 <body>
     <div class="wrapper">
@@ -64,41 +66,41 @@
                 </div>
             </nav>
         </header>
-        
-        <main class="register-login-form">
-            <form>
-                <div class="container">
-                  <h1 class="format-form-text">Реєстрація</h1>
-                  <p><label for="email"><b>Ім'я</b></label></p>
-                  <input type="text" placeholder="Ім'я" name="email" required>
+        <main>
+            <div class="box header-style-margin">
+                <h1 class="info-section-header">Форум</h1>
+            </div>
+                <div class="text-photo-block">
+                        <div class="text-exhibitions-block info-club-block text-photo-block-content text-photo-block-item ">
+                            <p>Отже, прохання бути чемним та ввічливим, тепер має набагато серйозніший підтекст.
+                                І це "серйозний кіт", який, якщо ти проштрафишся,
+                            прийде до тебе і буде пояснювати де саме ти комусь відповів, попросив неввічливо і можливо навіть перейшов на особу
+                            співрозмовця ображаючи його, його сім'ю і т.д.</p>
 
-                  <p><label for="email"><b>Прізвище</b></label></p>
-                  <input type="text" placeholder="Прізвище" name="email" required>
-
-                  <p><label for="email"><b>Логін</b></label></p>
-                  <input type="text" placeholder="Логін" name="email" required>
-
-                  <p><label for="email"><b>Електронна пошта</b></label></p>
-                  <input type="text" placeholder="Пошта" name="email" required>
-              
-                  <p><label for="psw"><b>Пароль</b></label></p>
-                  <input type="password" placeholder="Ввести пароль" name="psw" required>
-              
-                  <p><label for="psw-repeat"><b>Повтор паролю</b></label></p>
-                  <input type="password" placeholder="Повторити пароль" name="psw-repeat" required>
-                  <hr style="height: 2px; backgroud-color:#444;"/>
-                  <p>Створюючи акаунт ви погоджуєтесь із нашими <a href="#">умовами і політикою конфедеційності</a>.</p>
-                
-                  <p><button type="submit" class="btn btn-main reg-btn form-button">Зареєструватися</button></p>
-
+                            <p>Тому веди себе ввічливо, тому що цей кіт може видати тобі мут, тимчасовий бан акаунту або й видалити його, якщо це буде неодноразова акція.
+                            Також, повідомлення, яке ти написав буде видалено. Тому перш ніж відповісти, написати чи запитати добре подумай. Нехай щастить!
+                            </p>
+                        </div>  
+                        <div class="text-photo-block-img text-photo-block-item"> </div>
                 </div>
+            </div>
 
-                <div class="reg-header-container question">
-                    <p>Вже маєш акаунт? Ну тоді, нумо до <a href="login.html">Входу</a>!</p>
-                </div>
-              </form>
+            <div class="box"> 
+                <h1 class="info-section-header">Актуальні теми обговорення проблем кішок</h1>
+            </div>
+
+            <div class="forum-actual-question">
+                <ul class="forum-actual-question-list">
+                    <li><a href="">Моя кішка не може сходити до туалету, що ж робити?</a></li>
+                    <li><a href="">Чому мій кіт після стерилізації впав у депресію? Можливо це якось виправити?</a></li>
+                    <li><a href="">Кішка падає завжди на лапи, а бутерброд маслом вниз. Якщо я прив'яжу будерброд маслом вверх до кішки і кину кішку вийде нескінчченний двигун?</a></li>
+                    <li><a href="">Одружився, але кішка моєї нової дружини нападає на мене. Що робити? Як ввійти в її коло довіри?</a></li>
+                    <li><a href="">Помічаю за кішкою маніакальна наклонності, весь час вбиває голубів, хоча ми вегетеріанці. Чому так? І як змусити її перейти на зелену їжу!</a></li>
+                </ul>
+            </div>
+
         </main>
-
+        
         <footer class="footer">
             <div class="footer-all-info">
                 <div class = "social-media-footer">
@@ -160,7 +162,9 @@
                     </div>
                 </div>
             </div>
+
             <hr/>
+
             <div class ="footer-rights">
                 <h1>@Всі права захищені!</h1>
             </div>

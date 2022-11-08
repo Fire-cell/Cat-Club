@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css">
     
-    <title>HomePage</title>
+    <title>Домашня сторінка</title>
 </head>
 <body>
     <div class="wrapper">
@@ -22,20 +22,38 @@
                     </div>
                     <div class="logo-container">
                         <a href="index.html"><img src = "img/Logo.jpg" class="logo"/></a>
+                        <p>Котолюб</p>
                     </div>
                         <ul class="menu-items">
                             <li><a href="index.html">Головна</a></li>
-                            <li><a href="#about">Оголошення</a></li>
-                            <li><a href="#catalogue">Каталог</a></li>
+
+                            <li class="menu-drop-block"><a>Публікації</a>
+                                <ul>
+                                    <li><a href="#catalogue">Каталог</a></li>
+                                    <li><a href="forum.html">Форум</a></li>
+                                    <li><a href="#about">Оголошення</a></li>
+                                </ul>
+                            </li>
+
+                             <!--Відображення для мобільних пристроїв-->
+                             <li class="phone-item"><a href="#catalogue">Каталог</a></li>
+                             <li class="phone-item"><a href="forum.html">Форум</a></li>
+                             <li class="phone-item"><a href="#about">Оголошення</a></li>
+                             <!--Відображення для мобільних пристроїв-->
+
+                            <li><a href="exhibitions.html">Виставки</a></li>
                             <li><a href="#winners">Переможці</a></li>
-                            <li><a href="#exhibitions">Виставки</a></li>
                             <li><a href="#aboutUs">Про нас</a></li>
                             <li><a href="#contact">Контакти</a></li>
-                        <ul class="menu-register-items">
-                            <li><a href="login.html">Вхід</a></li>
+
+
+                            <!--Відображення для мобільних пристроїв-->
+                            <ul class="menu-register-items">
+                                <li><a href="login.html">Вхід</a></li>
                                 <li>/</li>
                                 <li><a href="register.html">Реєстрація</a></li>
                             </ul>
+                            <!--Відображення для мобільних пристроїв-->
                         </ul>
 
                         <ul class="register-items">
@@ -170,7 +188,19 @@
                     <a href="#" class="btn btn-main btn-submit">Надіслати!</a>
                   </div>
                 </div>
+                <div class="contact-data">
+                    <div>Телефони📞: 
+                        <p>044-400-61-46</p>
+                        <p>044-529-24-02</p>
+                    </div>
+                    <div>Пошта📧: 
+                        <p>cat-lover-love-cat@mail.com</p>
+                    </div>
+                    <div>Адреса: <p>1190 Folsom St, San Francisco, CA 94103</p></div>
+                  </div>
               </section>
+
+              
 
               <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6256275962983!2d-122.41205978519042!3d37.77537551989891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580827e037057%3A0x8a92272bbdcb8523!2sCat%20Club!5e0!3m2!1suk!2sus!4v1667321910921!5m2!1suk!2sus" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
