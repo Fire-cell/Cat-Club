@@ -1,41 +1,71 @@
 .register-login-form {
-    width: 100%;
+    width: 90%;
     text-align: center;
-    margin: 15% auto;    
+    margin: 15% auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin-bottom: 60px;    
+}
+
+.sub-container {
+    width: 40%;
+    margin: 20px;
 }
 
 .format-form-text {
     font-size: 2rem;
+    font-family: inherit;
     margin: 2%;
 }
 
 .reg-header-container {
     padding: 16px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .reg-btn {
     margin: 5px auto;
 }
 
-.form-button {
+.form-button, .clear {
+    font-family: inherit;
+    font-size: calc(5px + 9 * (100vw / 1280));
     width: 30%;
     height: 3rem;
 }
 
-input[type=text], input[type=password] {
-    width: 50%;
+
+.form-button:hover, .clear:hover {
+    box-shadow: 0 1px 6px 0 rgb(13, 56, 100, 0.74);
+    transform: translateY(-2px);
+}
+
+input[type=text], input[type=number], input[type=date], textarea, select {
+    font-family: inherit;
+    width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    border-radius: 15%;
-    background: #f1f1f1;
+    border-radius: 10px;
+    background: rgb(241, 241, 241);
 }
 
-input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
+input[type=text]:focus, input[type=number]:focus, input[type=date]:focus, textarea:focus, select:focus {
+    background-color: rgb(221, 221, 221);
     outline: none;
+}
+
+input[type=text]:hover, input[type=number]:hover, input[type=date]:hover, textarea:hover {
+    box-shadow: 0 1px 6px 0 rgb(13, 56, 100, 0.74);
+    transition-duration: 0.3s;
+    transform: translateY(-2px);
 }
 
 a {
@@ -45,4 +75,9 @@ a {
 .question {
     text-align: center;
     font-size: 1.5rem;
+}
+
+.cat-form {
+    box-shadow: 0 1px 6px 0 #000000;
+    border-radius: 10px;
 }

@@ -1,11 +1,11 @@
 "use strict";
 
-//Класно
 const slides = document.querySelectorAll(".slide");
 
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
+setTimeout(()=>{
+  document.getElementById("winner-slider-section").style.visibility="visible";
+}, 3000);
+
 
 const nextSlide = document.querySelector(".slider-btn-next");
 let curSlide = 0;
@@ -18,9 +18,7 @@ nextSlide.addEventListener("click", function () {
     curSlide++;
   }
 
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
+  renewSlider();
 });
 
 const prevSlide = document.querySelector(".slider-btn-prev");
@@ -31,12 +29,33 @@ prevSlide.addEventListener("click", function () {
   } else {
     curSlide--;
   }
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+
+  renewSlider();
+});
+
+const indicators = document.getElementsByClassName("indicator");
+console.log(indicators);
+
+Array.from(indicators).forEach((element, indx) => {
+  element.addEventListener("click", function () {
+    curSlide = indx;
+    console.log(indx);
+
+    renewSlider();
   });
 });
 
+renewSlider();
 
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+function renewSlider() {
+  Array.from(indicators).forEach((element) => {
+    if(curSlide === Number(element.dataset.slide)) {
+      element.style.background = "rgba(14, 220, 235)";
+    } else {
+      element.style.background = "rgba(166, 246, 252)";
+    }
+  });
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+}

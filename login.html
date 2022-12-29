@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/register-login-form.css">
-    <title>Реєстрація</title>
+    <title>Вхід</title>
 </head>
 <body>
     <div class="wrapper">
@@ -22,16 +22,16 @@
                     </div>
                     <div class="logo-container">
                         <a href="index.html"><img src = "img/Logo.jpg" class="logo"/></a>
-                        <p>Котолюб</p>
+                        <p class="logo-text">Клуб любителів кішок "Котолюб"</p>
                     </div>
                         <ul class="menu-items">
                             <li><a href="index.html">Головна</a></li>
 
                             <li class="menu-drop-block"><a>Публікації</a>
                                 <ul>
-                                    <li><a href="#catalogue">Каталог</a></li>
-                                    <li><a href="forum.html">Форум</a></li>
-                                    <li><a href="#about">Оголошення</a></li>
+                                    <li class="scrolled"><a href="#catalogue">Каталог</a></li>
+                                    <li class="scrolled"><a href="forum.html">Форум</a></li>
+                                    <li class="scrolled"><a href="#about">Оголошення</a></li>
                                 </ul>
                             </li>
 
@@ -41,41 +41,46 @@
                              <li class="phone-item"><a href="#about">Оголошення</a></li>
                              <!--Відображення для мобільних пристроїв-->
 
-                            <li><a href="exhibitions.html">Виставки</a></li>
-                            <li><a href="index.html">Переможці</a></li>
-                            <li><a href="index.html">Про нас</a></li>
-                            <li><a href="index.html">Контакти</a></li>
+                            <li class="scrolled"><a href="exhibitions.html">Виставки</a></li>
+                            <li class="scrolled"><a href="index.html">Переможці</a></li>
+                            <li class="scrolled"><a href="index.html">Про нас</a></li>
+                            <li class="scrolled"><a href="index.html">Контакти</a></li>
 
 
                             <!--Відображення для мобільних пристроїв-->
                             <ul class="menu-register-items">
-                                <li><a href="login.html">Вхід</a></li>
+                                <li><a href="login.html"  style="color:rgb(255, 228, 120)">Вхід</a></li>
                                 <li>/</li>
                                 <li><a href="register.html">Реєстрація</a></li>
+
                             </ul>
                             <!--Відображення для мобільних пристроїв-->
                         </ul>
 
                         <ul class="register-items">
-                            <li><a href="login.html">Вхід</a></li>
-                            <li>/</li>
-                            <li><a href="register.html">Реєстрація</a></li>
+                            <li class="menu-drop-block-reg"> <a>Вхід/Реєстрація</a>
+                                <ul>
+                                    <li><a href="login.html"  style="color:rgb(255, 228, 120)">Вхід до клубу котячих любителів "Котолюб"</a></li>
+                                    <li><a href="register.html">Реєстрація членів клубу котячих любителів "Котолюб"</a></li>
+                                </ul>
+                            </li>
                         </ul>
                 </div>
             </nav>
         </header>
         
+        
         <main class="register-login-form">
-            <form>
+            <form id = "login-form">
                 <div class="reg-header-container">
                   <h1 class="format-form-text">Вхід</h1>
                   <p><label for="email"><b>Електронна пошта</b></label></p>
-                  <input type="text" placeholder="Електронна пошта" name="email" required>
+                  <input id="email" type="email" minlength="10" maxlength="64" placeholder="Електронна пошта" name="email" required>
               
                   <p><label for="psw"><b>Пароль</b></label></p>
-                  <input type="password" placeholder="Ввести пароль" name="psw" required>
+                  <input id="password" minlength="8" maxlength="22" type="password" placeholder="Ввести пароль" name="psw" required>
                 
-                  <p><button type="submit" class="btn btn-main reg-btn form-button">Зареєструватися</button></p>
+                  <p><button type="submit" class="btn btn-main reg-btn form-button">Ввійти</button></p>
                 </div>
 
                 <div class="reg-header-container question">
@@ -154,6 +159,7 @@
         
     </div>
 
-    <script src="scripts/slider-script.js"></script>
+    <script src="scripts/height-properties.js"></script>
+    <script src="scripts/login-validation.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ a {
 }
 
 hr {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 1px;
 }
 
@@ -49,7 +49,7 @@ body {
 body {
     line-height: 1;
     font-family: Manrope;
-    color: #333333;
+    color: rgb(51, 51, 51);
 }
 
 .wrapper {
@@ -78,11 +78,11 @@ body {
 }
 
 .navbar {
-  box-shadow: 0px 5px 10px 0px #aaa;
+  box-shadow: 0px 5px 10px 0px rgb(170, 170, 170);
   position: fixed;
   width: 100%;
-  background: #fff;
-  color: #000;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   opacity: 0.85;
   height: 59.5px;
   z-index: 12;
@@ -116,28 +116,33 @@ body {
 .register-items a,
 .menu-items a {
   text-decoration: none;
-  color: #444;
+  color: rgb(68, 68, 68);
   font-weight: 500;
 }
 
-.register-items a:hover,
-.menu-items a:hover {
-  color: #FFE4C4; /*Персикове щастя*/
+.register-items li a:hover,
+.menu-items li a:hover {
+  color: rgb(255, 228, 120); /*Персикове щастя*/
   transition: color 0.3s ease-in-out;
-}
+} 
 
-.menu-drop-block ul {
+.menu-drop-block ul, .menu-drop-block-reg ul {
   display: none;
   position: absolute;
-  background-color: #fff;
-  top: 70%;
+  background-color: rgb(255, 255, 255);
+  top: 65%;
   padding-left: calc(-100px);
-  width: 9rem;
-  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+  width: 20%;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
-.menu-drop-block:hover ul {
+.menu-drop-block:hover ul, .menu-drop-block-reg:hover ul {
   display: block;
+  transition-delay: 1s;
+}
+
+.menu-drop-block-reg ul {
+  transform: translateX(-50%);
 }
 
 .logo-container {
@@ -146,11 +151,15 @@ body {
   font-family: inherit;
   margin-bottom: 5px;
   height: 55px;
-  width: 70px;
+  width: 130px;
+}
+
+.logo-text {
+  font-size: 9px;
 }
 
 .logo {
-  width: 60%;
+  width: 35%;
   height: 70%;
 }
 
@@ -160,7 +169,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   position: absolute;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   padding: 0 20px;
 }
 
@@ -194,7 +203,7 @@ body {
     text-transform: uppercase;
     margin-top: 1.5em;
     font-size: calc(25px + (15 + 15 * 0.7) * ((100vw - 320px) / 1280));;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:inherit;
   }
 
 .btn {
@@ -215,12 +224,12 @@ body {
   
   .btn-main {
     text-align: center;
-    color: #fff;
-    background: #16a083;
+    color: rgb(255, 255, 255);
+    background: rgb(22, 160, 131);
   }
   
   .btn-main:hover {
-    background: #117964;
+    background: rgb(17, 120, 100);
     transition: background 0.3s ease-in-out;
   }
 
@@ -238,7 +247,7 @@ body {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #444;
+  background-color: rgb(68, 68, 68);
   position: absolute;
   top: 1.5rem;
 }
@@ -246,7 +255,7 @@ body {
   /*============= Текст, який сам вводиться! ====================*/
   .inputting-text {
     overflow: hidden; 
-    border-right: .15em solid orange; 
+    border-right: .15em solid rgb(255, 255, 255); 
     white-space: nowrap;
     margin: 0 auto; 
     letter-spacing: .15em;
@@ -262,7 +271,7 @@ body {
   
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: white; }
+    50% { border-color: rgb(255, 255, 255); }
   }
 
   /*=============Описання=====================*/
@@ -314,70 +323,11 @@ body {
   .block-h {
     margin-bottom: 2%;
     text-align: center;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: calc(14px + 16 * (100vw / 1280));
   }
 
-  .wrapper-wnr-cats {
-    background-color: rgb(226, 226, 226);
-  }
-/*================ Реалізація слайдера ===================*/
 
-.winner-cats {
-  height: calc(var(--vh, 1vh) * 100);
-  display: grid;
-  place-items: center;
-}
-
-.slider {
-  width: 100%;
-  max-width: 80%;
-  height: 80%;
-  position: relative;
-  overflow: hidden;  /* <===  */
-  border-radius: 15px;
-}
-
-.slide {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: all 0.5s;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slider-btn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  z-index: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
-}
-
-.slider-btn:active {
-  transform: scale(1.1);
-}
-
-.slider-btn-prev {
-  top: 45%;
-  left: 2%;
-}
-
-.slider-btn-next {
-  top: 45%;
-  right: 2%;
-}
 
 /*================ Напишіть нам форма ===================*/
 
@@ -388,7 +338,7 @@ body {
 
 .contact-container {
   display: flex;
-  background: #fff;
+  background: rgb(255, 255, 255);
 }
 
 .contact-img {
@@ -425,9 +375,9 @@ body {
   margin: 2%;
   font: calc(5px + 20 * (100vw / 1280));
   text-align: center;
-  font-family: Manrope;
+  font-family: inherit;
   font-weight: 500;
-  color: #444;
+  color: rgb(68, 68, 68);
 }
 
 .social-media-container {
@@ -446,12 +396,12 @@ body {
   display: block;
   width: 100%;
   border: none;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid rgb(221, 221, 221);
   padding: 1rem 0;
   box-shadow: none;
   outline: none;
   margin-bottom: 1rem;
-  color: #444;
+  color: rgb(68, 68, 68);
   font-weight: 500;
 }
 
@@ -459,7 +409,7 @@ body {
   display: block;
   width: 100%;
   border: none;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid rgb(221, 221, 221);
   color: #444;
   outline: none;
   padding: 1rem 0;
@@ -469,7 +419,7 @@ body {
 .form-container h2 {
   font-size: calc(16px + 20 * (100vw / 1280));
   font-weight: 500;
-  color: #444;
+  color: rgb(68, 68, 68);
   margin-bottom: 1rem;
   margin-top: -1.2rem;
 }
@@ -490,11 +440,10 @@ body {
 .contact-data {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 1%;
   font-size: calc(4px + 12 * (100vw / 1280));
-  border-top: 2px solid #444;
-  border-bottom: 2px solid #444;
+  border-top: 2px solid rgb(68, 68, 68);
 }
 
 /*================ Мапа ===================*/
@@ -579,7 +528,7 @@ body {
 
 .footer-rights {
   background-color: rgb(75,0,130, 0.9);
-  color: white;
+  color: rgb(255, 255, 255);
   height: calc(var(--vh, 1vh) * 3);
   width: 100%;
   text-align: center;
@@ -632,7 +581,7 @@ body {
       height: 4px;
       width: 100%;
       border-radius: 10px;
-      background: #333;
+      background: rgb(51, 51, 51);
     }
   
     .navbar-container .hamburger-lines .line1 {
@@ -651,7 +600,7 @@ body {
   
     .navbar .menu-items {
       padding-top: 100px;
-      background: #fff;
+      background: rgb(255, 255, 255);
       height: calc(var(--vh, 1vh) * 100);
       max-width: 300px;
       transform: translate(-150%);
@@ -660,7 +609,7 @@ body {
       margin-left: -40px;
       padding-left: 50px;
       transition: transform 0.5s ease-in-out;
-      box-shadow: 5px 0px 10px 0px #aaa;
+      box-shadow: 5px 0px 10px 0px rgb(170, 170, 170);
     }
 
     .register-items {
@@ -756,4 +705,3 @@ body {
     }
 
 }
-

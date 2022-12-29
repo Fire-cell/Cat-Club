@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/register-login-form.css">
     <link rel="stylesheet" href="style/exhibitions.css">
     <link rel="stylesheet" href="style/forum.css">
+
     <title>Форум</title>
 </head>
 <body>
@@ -24,16 +25,16 @@
                     </div>
                     <div class="logo-container">
                         <a href="index.html"><img src = "img/Logo.jpg" class="logo"/></a>
-                        <p>Котолюб</p>
+                        <p class="logo-text">Клуб любителів кішок "Котолюб"</p>
                     </div>
                         <ul class="menu-items">
                             <li><a href="index.html">Головна</a></li>
 
-                            <li class="menu-drop-block"><a>Публікації</a>
+                            <li class="menu-drop-block"><a style="cursor:pointer;">Публікації</a>
                                 <ul>
-                                    <li><a href="#catalogue">Каталог</a></li>
-                                    <li><a href="forum.html">Форум</a></li>
-                                    <li><a href="#about">Оголошення</a></li>
+                                    <li class="scrolled"><a href="#catalogue">Каталог</a></li>
+                                    <li class="scrolled"><a href="forum.html">Форум</a></li>
+                                    <li class="scrolled"><a href="#about">Оголошення</a></li>
                                 </ul>
                             </li>
 
@@ -43,62 +44,224 @@
                              <li class="phone-item"><a href="#about">Оголошення</a></li>
                              <!--Відображення для мобільних пристроїв-->
 
-                            <li><a href="exhibitions.html">Виставки</a></li>
-                            <li><a href="index.html">Переможці</a></li>
-                            <li><a href="index.html">Про нас</a></li>
-                            <li><a href="index.html">Контакти</a></li>
+                            <li class="scrolled"><a href="exhibitions.html">Виставки</a></li>
+                            <li class="scrolled"><a href="index.html">Переможці</a></li>
+                            <li class="scrolled"><a href="index.html">Про нас</a></li>
+                            <li class="scrolled"><a href="index.html">Контакти</a></li>
 
 
                             <!--Відображення для мобільних пристроїв-->
                             <ul class="menu-register-items">
                                 <li><a href="login.html">Вхід</a></li>
                                 <li>/</li>
-                                <li><a href="register.html">Реєстрація</a></li>
+                                <li><a href="register.html" style="color:rgb(255, 228, 120)">Реєстрація</a></li>
+
                             </ul>
                             <!--Відображення для мобільних пристроїв-->
                         </ul>
 
                         <ul class="register-items">
-                            <li><a href="login.html">Вхід</a></li>
-                            <li>/</li>
-                            <li><a href="register.html">Реєстрація</a></li>
+                            <li class="menu-drop-block-reg"> <a>Вхід/Реєстрація</a>
+                                <ul>
+                                    <li><a href="login.html" >Вхід до клубу котячих любителів "Котолюб"</a></li>
+                                    <li><a href="register.html" style="color:rgb(255, 228, 120)">Реєстрація членів клубу котячих любителів "Котолюб"</a></li>
+                                </ul>
+                            </li>
                         </ul>
                 </div>
             </nav>
         </header>
+
         <main>
-            <div class="box header-style-margin">
-                <h1 class="info-section-header">Форум</h1>
-            </div>
-                <div class="text-photo-block">
-                        <div class="text-exhibitions-block info-club-block text-photo-block-content text-photo-block-item ">
-                            <p>Отже, прохання бути чемним та ввічливим, тепер має набагато серйозніший підтекст.
-                                І це "серйозний кіт", який, якщо ти проштрафишся,
-                            прийде до тебе і буде пояснювати де саме ти комусь відповів, попросив неввічливо і можливо навіть перейшов на особу
-                            співрозмовця ображаючи його, його сім'ю і т.д.</p>
-
-                            <p>Тому веди себе ввічливо, тому що цей кіт може видати тобі мут, тимчасовий бан акаунту або й видалити його, якщо це буде неодноразова акція.
-                            Також, повідомлення, яке ти написав буде видалено. Тому перш ніж відповісти, написати чи запитати добре подумай. Нехай щастить!
-                            </p>
-                        </div>  
-                        <div class="text-photo-block-img text-photo-block-item"> </div>
-                </div>
-            </div>
-
             <div class="box"> 
                 <h1 class="info-section-header">Актуальні теми обговорення проблем кішок</h1>
             </div>
 
-            <div class="forum-actual-question">
-                <ul class="forum-actual-question-list">
-                    <li><a href="">Моя кішка не може сходити до туалету, що ж робити?</a></li>
-                    <li><a href="">Чому мій кіт після стерилізації впав у депресію? Можливо це якось виправити?</a></li>
-                    <li><a href="">Кішка падає завжди на лапи, а бутерброд маслом вниз. Якщо я прив'яжу будерброд маслом вверх до кішки і кину кішку вийде нескінчченний двигун?</a></li>
-                    <li><a href="">Одружився, але кішка моєї нової дружини нападає на мене. Що робити? Як ввійти в її коло довіри?</a></li>
-                    <li><a href="">Помічаю за кішкою маніакальна наклонності, весь час вбиває голубів, хоча ми вегетеріанці. Чому так? І як змусити її перейти на зелену їжу!</a></li>
-                </ul>
+            <div class="filter-window">
+                <label for="theme-search-nm">Пошук за темою</label>
+                <input id="theme-search" name="theme-search-nm" list="theme-search-list" type="text" placeholder="Пошук за темою">
+                <datalist id="theme-search-list">
+                    <option value="Здоров'я та благополуччя кішки">
+                    <option value="Цікаве спостереження">
+                    <option value="Співжиття із кішкою">
+                    <option value="Проблемна кішка">
+                </datalist>
+                <label for="user-search-nm">Пошук за користувачем</label>
+                <input id="user-search" type="text" placeholder="Пошук за користувачем" name="user-search-nm">
+                <label for="breed-search-nm">Пошук за породою кішки</label>
+                <input id="breed-search" type="text" placeholder="Пошук за породою кішки" name="breed-search-nm">
+                <label for="date-from-search-nm">Дата від:</label>
+                <input id="date-from-search" name="date-from-search-nm" type="date">
+                <label for="">Дата до:</label>
+                <input id="date-to-search" name="date-to-search-nm" type="date"> 
+                <label for="user-confirm-nm" style="user-select: none;"><input id="user-confirm" type="checkbox" name="user-confirm-nm"><u style="color: dodgerblue; text-underline-offset: 3px;">Я даю згоду на обробку та зберігання моїх персональних даних.</u></label>
+                <div class="buttons-container">
+                    <button id="clear-input-button" class ="btn btn-main reg-btn">Очистити поля фільтрації</button>
+                    <button id="search-button" class ="btn btn-main reg-btn">Пошук</button>
+                </div>
+            </div>
+            
+            <div class="forum-actual-discussion">
+                    <div class="subforum">
+                        <div class="subforum-title">
+                            <h1>Здоров'я та благополуччя кішки</h1>
+                        </div>
+
+                        <div class="subforum-row">
+                            <div class="subforum-icon subforum-column" >
+                                <img src="img/cat-user-logo.svg" width="100" height="100" alt="">
+                            </div>
+
+
+                        <div class="subforum-description subforum-column">
+                            <h1><a href="">Моя кішка не може сходити до туалету, що ж робити?</a></h1>
+                            <p>Дуже довго спостерігаю за своєю кішкою і помітив, що вона не ходить у туалет! Чому? Можливо це якийсь стрес?
+                                Не буде дивним якщо я піду разом з нею до ветеренара по такій причині? Підкажіть, будь ласка!
+                            </p>
+                        </div>
+
+                        <div class="subform-stats subforum-column">
+                            <span>2 Відповіді</span>
+                        </div>
+
+                        <div class="subform-info subforum-column">
+                            Запостив користувач <a class="user" href="">VitoScaletta</a>
+                            <br> порода кішки <a class="breeds" href="">Британська вісловуха</a>
+                            на <small class="post-date">2021-12-22</small> 
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <div class="forum-actual-discussion">
+                <div class="subforum">
+                    <div class="subforum-title">
+                        <h1>Здоров'я та благополуччя кішки</h1>
+                    </div>
+                    <div class="subforum-row">
+                        <div class="subforum-icon subforum-column" >
+                            <img src="img/cat-user-logo.svg" width="100" height="100" alt="">
+                        </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Чому мій кіт після стерилізації впав у депресію? Можливо це якось виправити?</a></h1>
+                                <p>Мій кіт Герольд упав у депресію!
+                                    Він у мене аристократ і я подумав, що можливо його "голуба кров" так хоче, тому зі мною так.
+                                    Проте, вчора я дізнався, що моя дружина Бенедікта віддала його до ветеренара, бо вважала, що він себе погано поводить.
+                                    Ветеренар у свою чергу вирішив його каструвати.
+                                </p>
+                                <p>
+                                    Будь ласка, підкажіть, що робити? Я собі місця не нахожду, я люблю Герольда і не хочу, аби він сумував.
+                                </p>
+                            </div>
+                        
+                            <div class="subform-stats subforum-column">
+                                <span>10 Відповідей</span>
+                            </div>
+                        
+                            <div class="subform-info subforum-column">
+                                Запостив користувач <a href="">KolioRossini</a>
+                                <br> порода кішки <a class="breeds" href="">Шотландська вісловуха</a>
+                                на <small class="post-date">2020-09-07</small> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="forum-actual-discussion">
+                    <div class="subforum">
+                        <div class="subforum-title">
+                            <h1>Цікаве спостереження</h1>
+                        </div>
+                    
+                        <div class="subforum-row">
+                            <div class="subforum-icon subforum-column" >
+                                <img src="img/cat-user.png" width="100" height="100" alt="">
+                            </div>
+                        
+                        
+                        <div class="subforum-description subforum-column">
+                            <h1><a href="">Кішка падає завжди на лапи, а бутерброд маслом вниз. Якщо я прив'яжу будерброд маслом вверх до кішки і кину кішку вийде нескінчченний двигун?</a></h1>
+                            <p>Хтось пробував? Дуже цікаво просто...</p>
+                        </div>
+                    
+                        <div class="subform-stats subforum-column">
+                            <span>1 Відповідь</span>
+                        </div>
+                    
+                        <div class="subform-info subforum-column">
+                            Запостив користувач <a href="">VictorioBibik</a>
+                            <br> порода кішки <a class="breeds" href="">Шотландська вісловуха</a>
+                            на <small class="post-date">2019-09-28</small> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="forum-actual-discussion">
+                    <div class="subforum">
+                        <div class="subforum-title">
+                            <h1>Співжиття із кішкою</h1>
+                        </div>
+                    
+                        <div class="subforum-row">
+                            <div class="subforum-icon subforum-column" >
+                                <img src="img/cat-user-logo.svg" width="100" height="100" alt="">
+                            </div>
+                        
+                        
+                        <div class="subforum-description subforum-column">
+                            <h1><a href="">Одружився, але кішка моєї нової дружини нападає на мене. Що робити? Як ввійти в її коло довіри?</a></h1>
+                            <p>Кішка дуже гордовита, б'ється, дереться і дуже агресивно себе поводить. Проте, коли вона на руках у жінки, то все добре. Чому так? Невже я їй чимось не подобаюсь? Підскажіть як стати членом сім'ї для кішки!
+                            </p>
+                        </div>
+                    
+                        <div class="subform-stats subforum-column">
+                            <span> 0 Відповідей</span>
+                        </div>
+                    
+                        <div class="subform-info subforum-column">
+                            Запостив користувач <a href="">VovaGonchar</a>
+                            <br> порода кішки <a class="breeds" href="">Британська вісловуха</a>
+                            на <small class="post-date">2021-08-12</small> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="forum-actual-discussion">
+                <div class="subforum">
+                    <div class="subforum-title">
+                        <h1>Проблемна кішка</h1>
+                    </div>
+                
+                    <div class="subforum-row">
+                        <div class="subforum-icon subforum-column" >
+                            <img src="img/cat-user-logo.svg" width="100px" height="100px" alt="">
+                        </div>
+                    
+                    
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Помічаю за кішкою маніакальна наклонності. </a></h1>
+                        <p>Весь час вбиває голубів, хоча ми вегетеріанці. Чому так? І як змусити її перейти на зелену їжу!
+                        </p>
+                    </div>
+                
+                    <div class="subform-stats subforum-column">
+                        <span>2 Відповіді</span>
+                    </div>
+                
+                    <div class="subform-info subforum-column">
+                        Запостив користувач <a href="">EmiliaOkrenets</a>
+                        <br> порода кішки <a class="breeds" href="">Норвезька лісова</a>
+                        на <small class="post-date">2020-11-20</small> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                                
         </main>
         
         <footer class="footer">
@@ -172,6 +335,7 @@
         
     </div>
 
-    <script src="scripts/slider-script.js"></script>
+    <script src="scripts/filterForm.js"></script>
+    <script src="scripts/addUserInputToLocalStorage.js"></script>
 </body>
 </html>

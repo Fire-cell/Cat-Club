@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css">
-    
+    <link rel="stylesheet" href="style/slider.css">
     <title>Домашня сторінка</title>
 </head>
 <body>
@@ -22,16 +22,16 @@
                     </div>
                     <div class="logo-container">
                         <a href="index.html"><img src = "img/Logo.jpg" class="logo"/></a>
-                        <p>Котолюб</p>
+                        <p class="logo-text">Клуб любителів кішок "Котолюб"</p>
                     </div>
                         <ul class="menu-items">
-                            <li><a href="index.html">Головна</a></li>
+                            <li><a href="#home" style="color:rgb(255, 228, 120)">Головна</a></li>
 
                             <li class="menu-drop-block"><a>Публікації</a>
                                 <ul>
-                                    <li><a href="#catalogue">Каталог</a></li>
-                                    <li><a href="forum.html">Форум</a></li>
-                                    <li><a href="#about">Оголошення</a></li>
+                                    <li class="scrolled"><a href="#catalogue">Каталог</a></li>
+                                    <li class="scrolled"><a href="forum.html">Форум</a></li>
+                                    <li class="scrolled"><a href="#about">Оголошення</a></li>
                                 </ul>
                             </li>
 
@@ -41,10 +41,10 @@
                              <li class="phone-item"><a href="#about">Оголошення</a></li>
                              <!--Відображення для мобільних пристроїв-->
 
-                            <li><a href="exhibitions.html">Виставки</a></li>
-                            <li><a href="#winners">Переможці</a></li>
-                            <li><a href="#aboutUs">Про нас</a></li>
-                            <li><a href="#contact">Контакти</a></li>
+                            <li class="scrolled"><a href="exhibitions.html">Виставки</a></li>
+                            <li class="scrolled"><a href="#winners">Переможці</a></li>
+                            <li class="scrolled"><a href="#aboutUs">Про нас</a></li>
+                            <li class="scrolled"><a href="#contact">Контакти</a></li>
 
 
                             <!--Відображення для мобільних пристроїв-->
@@ -52,18 +52,23 @@
                                 <li><a href="login.html">Вхід</a></li>
                                 <li>/</li>
                                 <li><a href="register.html">Реєстрація</a></li>
+
                             </ul>
                             <!--Відображення для мобільних пристроїв-->
                         </ul>
 
                         <ul class="register-items">
-                            <li><a href="login.html">Вхід</a></li>
-                            <li>/</li>
-                            <li><a href="register.html">Реєстрація</a></li>
+                            <li class="menu-drop-block-reg"> <a>Вхід/Реєстрація</a>
+                                <ul>
+                                    <li><a href="login.html">Вхід до клубу котячих любителів "Котолюб"</a></li>
+                                    <li><a href="register.html">Реєстрація членів клубу котячих любителів "Котолюб"</a></li>
+                                </ul>
+                            </li>
                         </ul>
                 </div>
             </nav>
         </header>
+
         <main class="page">
             <section id = "home" class="showcase-area">
                 <div class="welcome-text">
@@ -73,7 +78,44 @@
                 </div>    
             </section>
 
+            
+            <div class="box wnr-cats">
+                <h1 class="info-section-header wnr-cats-hdr">Коти переможців минулих виставок!</h1>
+            </div>
 
+        <section id="winner-slider-section">
+        <div id="winners" class="winner-cats">
+            <div class="slider">
+                <div class="slide">
+                  <img src="img/winner-cat-3.jpg" alt="" />
+                </div>
+            
+                <div class="slide">
+                  <img src="img/winner-cat-6.jpg" alt="" />
+                </div>
+            
+                <div class="slide">
+                  <img src="img/winner-cat-7.jfif" alt="" />
+                  
+                </div>
+            
+                <div class="slide">
+                  <img src="img/winner-cat-10.jpg" alt="" />
+                </div>
+
+                <button class="slider-btn slider-btn-next">&gt;</button>
+                <button class="slider-btn slider-btn-prev">&lt;</button>
+            </div>
+
+        </div>
+        
+        <ol class="slider-indicators">
+            <li class ="indicator" data-slide="0"></li>
+            <li class ="indicator" data-slide="1"></li>
+            <li class ="indicator" data-slide="2"></li>
+            <li class ="indicator" data-slide="3"></li>
+        </ol>
+       </section>
             <section id="aboutUs">
                  <div class="box">
                     <h1 class="info-section-header">Про нас</h1>
@@ -127,36 +169,6 @@
                     </div>
                 </section>
 
-                <div class="box wnr-cats">
-                    <h1 class="info-section-header wnr-cats-hdr">Коти переможців минулих виставок!</h1>
-                </div>
-
-            <section id="winners" class="winner-cats">
-                <div class="slider">
-                    <div class="slide">
-                      <img src="img/winner-cat-3.jpg" alt="" />
-                    </div>
-                
-                    <div class="slide">
-                      <img src="img/winner-cat-6.jpg" alt="" />
-                    </div>
-                
-                    <div class="slide">
-                      <img src="img/winner-cat-7.jfif" alt="" />
-                      
-                    </div>
-                
-                    <div class="slide">
-                      <img src="img/winner-cat-10.jpg" alt="" />
-                    </div>
-
-                    <button class="slider-btn slider-btn-next">&gt;</button>
-                    <button class="slider-btn slider-btn-prev">&lt;</button>
-                </div>
-
-                
-            </section>
-            
             <section id="contact">
                 <div class="contact-container container">
                   <div class="contact-img">
@@ -177,7 +189,7 @@
                         <h2>Напишіть нам!</h2>
                     </div>
                     <input type="text" placeholder="Ваше ім'я" />
-                    <input type="email" placeholder="Електронная пошта" />
+                    <input type="email" placeholder="Електронна пошта" />
                     <input type="phone-number" placeholder="Номер телефону (необов'язково)" />
                     <input type="theme" placeholder="Тема" />
                     <textarea
@@ -196,7 +208,7 @@
                     <div>Пошта📧: 
                         <p>cat-lover-love-cat@mail.com</p>
                     </div>
-                    <div>Адреса: <p>1190 Folsom St, San Francisco, CA 94103</p></div>
+                    <div>Адреса📍: <p>1190 Folsom St, San Francisco, CA 94103</p></div>
                   </div>
               </section>
 
@@ -245,17 +257,17 @@
                         <h2 class="social-media-footer-header form-container">Навігація</h2>
                     </div>
 
-                        <div class="certificate-items">
-                            <ul class="certificate-items-list">
-                                <li><a href="#home">Головна</a></li>
-                                <li><a href="#about">Оголошення</a></li>
-                                <li><a href="#catalogue">Каталог</a></li>
-                                <li><a href="#winners">Переможці</a></li>
-                                <li><a href="#exhibitions">Виставки</a></li>
-                                <li><a href="#aboutUs">Про нас</a></li>
-                                <li><a href="#contact">Контакти</a></li>
-                            </ul>
-                        </div>
+                    <div class="certificate-items">
+                        <ul class="certificate-items-list">
+                            <li><a href="#home">Головна</a></li>
+                            <li><a href="#about">Оголошення</a></li>
+                            <li><a href="#catalogue">Каталог</a></li>
+                            <li><a href="#winners">Переможці</a></li>
+                            <li><a href="#exhibitions">Виставки</a></li>
+                            <li><a href="#aboutUs">Про нас</a></li>
+                            <li><a href="#contact">Контакти</a></li>
+                        </ul>
+                    </div>
                     </div>
 
                     <div class="footer-register certificate">

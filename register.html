@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/register-login-form.css">
+    <link rel="stylesheet" href="style/popUpWindow.css">
     <title>Реєстрація</title>
 </head>
 <body>
@@ -22,16 +23,16 @@
                     </div>
                     <div class="logo-container">
                         <a href="index.html"><img src = "img/Logo.jpg" class="logo"/></a>
-                        <p>Котолюб</p>
+                        <p class="logo-text">Клуб любителів кішок "Котолюб"</p>
                     </div>
                         <ul class="menu-items">
                             <li><a href="index.html">Головна</a></li>
 
                             <li class="menu-drop-block"><a>Публікації</a>
                                 <ul>
-                                    <li><a href="#catalogue">Каталог</a></li>
-                                    <li><a href="forum.html">Форум</a></li>
-                                    <li><a href="#about">Оголошення</a></li>
+                                    <li class="scrolled"><a href="#catalogue">Каталог</a></li>
+                                    <li class="scrolled"><a href="forum.html">Форум</a></li>
+                                    <li class="scrolled"><a href="#about">Оголошення</a></li>
                                 </ul>
                             </li>
 
@@ -41,63 +42,113 @@
                              <li class="phone-item"><a href="#about">Оголошення</a></li>
                              <!--Відображення для мобільних пристроїв-->
 
-                            <li><a href="exhibitions.html">Виставки</a></li>
-                            <li><a href="index.html">Переможці</a></li>
-                            <li><a href="index.html">Про нас</a></li>
-                            <li><a href="index.html">Контакти</a></li>
+                            <li class="scrolled"><a href="exhibitions.html">Виставки</a></li>
+                            <li class="scrolled"><a href="index.html">Переможці</a></li>
+                            <li class="scrolled"><a href="index.html">Про нас</a></li>
+                            <li class="scrolled"><a href="index.html">Контакти</a></li>
 
 
                             <!--Відображення для мобільних пристроїв-->
                             <ul class="menu-register-items">
                                 <li><a href="login.html">Вхід</a></li>
                                 <li>/</li>
-                                <li><a href="register.html">Реєстрація</a></li>
+                                <li><a href="register.html" style="color:rgb(255, 228, 120)">Реєстрація</a></li>
+
                             </ul>
                             <!--Відображення для мобільних пристроїв-->
                         </ul>
 
                         <ul class="register-items">
-                            <li><a href="login.html">Вхід</a></li>
-                            <li>/</li>
-                            <li><a href="register.html">Реєстрація</a></li>
+                            <li class="menu-drop-block-reg"> <a>Вхід/Реєстрація</a>
+                                <ul>
+                                    <li><a href="login.html" >Вхід до клубу котячих любителів "Котолюб"</a></li>
+                                    <li><a href="register.html" style="color:rgb(255, 228, 120)">Реєстрація членів клубу котячих любителів "Котолюб"</a></li>
+                                </ul>
+                            </li>
                         </ul>
                 </div>
             </nav>
         </header>
         
         <main class="register-login-form">
-            <form>
-                <div class="container">
+            <form id="register-form" onsubmit ="return validateForm()">
                   <h1 class="format-form-text">Реєстрація</h1>
-                  <p><label for="email"><b>Ім'я</b></label></p>
-                  <input type="text" placeholder="Ім'я" name="email" required>
+                  <div class="flex-container">
+                    <div class="sub-container">
+                        <p><label><b>Ім'я</b></label></p>
+                        <input id="firstName" type="text" minlength="2" placeholder="Ім'я" name="firstName" required> 
+                        <span id = "error-message-first-name" style="color:red"></span>
+                        <br><br>
+                    </div>
 
-                  <p><label for="email"><b>Прізвище</b></label></p>
-                  <input type="text" placeholder="Прізвище" name="email" required>
+                    <div class="sub-container">
+                        <p><label><b>Прізвище</b></label></p>
+                        <input id="lastName" type="text" minlength="2" placeholder="Прізвище" name="lastName"  required> 
+                        <span id = "error-message-last-name"  style="color:red "></span>
+                        <br><br>
+                    </div>
 
-                  <p><label for="email"><b>Логін</b></label></p>
-                  <input type="text" placeholder="Логін" name="email" required>
+                    <div class="sub-container">
+                        <p><label><b>Логін</b></label></p>
+                        <input id="login" type="text" minlength="10" maxlength="50" placeholder="Логін" name="login" required>
+                        <br><br>
+                    </div>
 
-                  <p><label for="email"><b>Електронна пошта</b></label></p>
-                  <input type="text" placeholder="Пошта" name="email" required>
-              
-                  <p><label for="psw"><b>Пароль</b></label></p>
-                  <input type="password" placeholder="Ввести пароль" name="psw" required>
-              
-                  <p><label for="psw-repeat"><b>Повтор паролю</b></label></p>
-                  <input type="password" placeholder="Повторити пароль" name="psw-repeat" required>
+                    <div class="sub-container">
+                        <p><label for="email"><b>Електронна пошта</b></label></p>
+                        <input id="user-email" minlength="10" maxlength="64" type="email" name="email" placeholder="Пошта" required>
+                        <br><br>
+                    </div>
+
+                    <div class="sub-container">
+                        <p><label for="psw"><b>Пароль</b></label></p> 
+                        <input id="password" minlength="8" maxlength="22" type="text" inputmode="latin"
+                         placeholder="Ввести пароль" name="password" autocomplete="new-password" required>
+                        <span id = "error-message-password" style="color:red"></span>
+                        <br><br>
+                    </div>
+
+                    <div class="sub-container">
+                        <p><label for="psw"><b>Повтор паролю</b></label></p>
+                        <input id="confirm-password" minlength="8" maxlength="22" type="text" inputmode="latin"
+                        placeholder="Повторити пароль" name="confirm-password" autocomplete="new-password" required> 
+                        <span id = "error-message-confirm-password" style="color:red"></span>
+                        <br><br>
+                    </div>
+
+                    <div class="sub-container">
+                        <p><label><b>Скільки у Вас кішок?</b></label></p>
+                        <input id="catNumber" type="number" min="1" max="1000" step="1" placeholder="Кількість кішок" name="catNumber" required>
+                        <br><br>
+                    </div>
+
+                    <div class="sub-container">
+                        <p><label><b>Розкажіть нам про ваших домашніх улюбленців!</b></label></p>
+                        <textarea id="catStory" name="description" minlength="100" maxlength="10000" placeholder="Розповідайте!" required></textarea>
+                        <br><br>
+                    </div>
+                  </div>
                   <hr style="height: 2px; backgroud-color:#444;"/>
                   <p>Створюючи акаунт ви погоджуєтесь із нашими <a href="#">умовами і політикою конфедеційності</a>.</p>
-                
-                  <p><button type="submit" class="btn btn-main reg-btn form-button">Зареєструватися</button></p>
-
-                </div>
-
+                  <button id="submit-button" type="submit" class="btn btn-main reg-btn form-button" data-modal-target>Зареєструватися</button> <br>
+                <button type = "reset" class="btn btn-main reg-btn clear">Очистити</button>
                 <div class="reg-header-container question">
                     <p>Вже маєш акаунт? Ну тоді, нумо до <a href="login.html">Входу</a>!</p>
                 </div>
               </form>
         </main>
+
+        <div id="modal" class="modal">
+            <div class="modal-header">
+                <div class="title">Дякуємо! Інформація надсилається!</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Ми розглянемо вашу заявку!</p>
+                </div>
+            </div>
+        <div id="overlay"></div>
 
         <footer class="footer">
             <div class="footer-all-info">
@@ -167,7 +218,11 @@
         </footer>
         
     </div>
-
-    <script src="scripts/slider-script.js"></script>
+   
+    <script src="scripts/register-validation.js"></script>
+    <script src="scripts/height-properties.js"></script>
+    <script src="scripts/addCatForm.js"></script>
+    <script src="scripts/popUpWindow.js"></script>
+    
 </body>
 </html>
