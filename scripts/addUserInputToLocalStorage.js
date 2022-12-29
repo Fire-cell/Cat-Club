@@ -2,7 +2,7 @@
 const arrFromLocaleStorage = JSON.parse(localStorage.getItem("userInput"));
 
 function fillUserInput() {
-    if(arrFromLocaleStorage ==! null) {
+    if(arrFromLocaleStorage !== null) {
         allUserInput.forEach((element, indx) => {
             element.value = arrFromLocaleStorage[indx];
         });
